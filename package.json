@@ -1,13 +1,12 @@
 {
   "name": "covid.backend",
   "version": "0.0.0",
-  "main": "./build/index.js",
   "private": true,
   "scripts": {
     "start-dev": "nodemon src/bin/www --exec babel-node --presets babel-preset-env",
 
     "build": "babel -d ./build ./src -s",
-    "start": "node ./build/index.js",
+    "start": " npm run build && node ./build/index.js",
     "mkfs": "babel-node mkfs.js --presets babel-preset-env",
     "rmfs": "babel-node rmfs.js --presets babel-preset-env"
   },
